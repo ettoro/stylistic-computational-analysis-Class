@@ -76,3 +76,26 @@ def getfeatures(corpus):
 
   corpus['typetoken_ratio'] = typetoken_ratio
   
+getfeatures(corpus)
+
+# selection of the features that will be used for classification
+corpus = corpus[['character', 'avg_word_length', 'avg_sent_length', 'avg_sent_length_char', 'prop_stopwords', 'typetoken_ratio', 'text_pos', 'bigrams_pos', 'trigrams_pos']].copy()
+
+# transform string-type features
+mlb = MultiLabelBinarizer()
+corpus = corpus.join(pd.DataFrame(mlb.fit_transform(corpus.pop('text_pos')),
+                          columns=mlb.classes_,
+                          index=corpus.index))
+
+corpus = corpus.join(pd.DataFrame(mlb.fit_transform(corpus.pop('bigrams_pos')),
+                          columns=mlb.classes_,
+                          index=corpus.index))
+
+corpus = corpus.join(pd.DataFrame(mlb.fit_transform(corpus.pop('trigrams_pos')),
+                          columns=mlb.classes_,
+                          index=corpus.index))
+
+# adjust features in order to maintain only those that are 
+features = corpus.drop(['character'],axis=1)
+features = features[corpusfeaturecorpuss.columns[features.sum()>10]]
+features['character'] = corpus['character']
