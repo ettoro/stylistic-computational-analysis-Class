@@ -22,6 +22,11 @@ clf.fit(X_train_res, Y_train_res)
 y_pred = clf.predict(X_test)
 print("Accuracy:",metrics.accuracy_score(Y_test, y_pred))
 
+# Print a confusion matrix after classification:
+disp = metrics.plot_confusion_matrix(model, X_test, Y_test, display_labels=None, cmap=plt.cm.Blues, normalize='true')
+disp.ax_.set_title('LogReg confusion matrix')
+
+
 # KERAS NEURAL NETWORK
 X = data.iloc[:, :-1]
 y = data.iloc[:,-1]
