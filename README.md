@@ -17,7 +17,11 @@ The main task of this project is to solve a multi-class classification problem i
   * knn
   * svc
   * neural network
-
+* __Graphic Visualisations__:
+  * PCA and t-SNE (2D)
+  * box plots for each feature
+  * pairplot of features
+  
 ### Data
 
 The corpus is not publicly available due to copyright, additional information about the play can be found [here](https://www.nickhernbooks.co.uk/class)
