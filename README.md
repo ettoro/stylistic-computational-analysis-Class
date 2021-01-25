@@ -8,7 +8,7 @@ The main task of this project is to solve a multi-class classification problem i
 * __Preprocessing__:
   * Set-up and package installations
   * Functions to obtain a df with the necessary features for classification starting from a tsv file where each line contains the character's name and its dialogue line
-  * Splitting of the train and test sets
+  * Splitting of the training and test sets
   * Data standardization
   * Data augmentation to obtain a balanced dataset
 * __Test (models trained)__: 
