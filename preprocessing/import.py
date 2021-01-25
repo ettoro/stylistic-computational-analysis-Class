@@ -1,3 +1,15 @@
+# pip install pandas
+# pip install spacy
+# pip install sklearn
+# pip install lexicalrichness
+# pip install textblob
+# pip install nltk
+# pip install matplotlib
+# pip install seaborn
+# pip install keras
+
+import spacy.cli
+from __future__ import unicode_literals
 import pandas as pd
 from pandas import DataFrame
 import spacy
@@ -25,16 +37,22 @@ from sklearn.metrics import classification_report, confusion_matrix
 from lexicalrichness import LexicalRichness
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.preprocessing import MinMaxScaler
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
 import nltk
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.wrappers.scikit_learn import KerasClassifier
+from sklearn.model_selection import cross_val_score
 import en_core_web_sm
 from sklearn.preprocessing import MultiLabelBinarizer
 from sklearn import svm
 from collections import Counter
+from keras.callbacks import TensorBoard
 from matplotlib import pyplot
 from sklearn.preprocessing import LabelEncoder
 from imblearn.over_sampling import SMOTE
 from sklearn import preprocessing
-from sklearn.preprocessing import StandardScaler
 from numpy import loadtxt
 from keras.models import Sequential
 from keras.layers import Dense
