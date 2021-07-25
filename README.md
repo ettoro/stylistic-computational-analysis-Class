@@ -7,10 +7,10 @@ The main task of this project is to solve a multi-class classification problem i
 
 * __Preprocessing__:
   * Set-up and package installations
-  * Functions to obtain a df with the necessary features for classification starting from a tsv file where each line contains the character's name and its dialogue line
-  * Splitting of the training and test sets
+  * Functions to obtain necessary features
+  * Splitting of training and test sets
   * Data standardization
-  * Data augmentation to obtain a balanced dataset
+  * Data augmentation
 * __Test (models trained)__: 
   * LogReg
   * Random Forest
@@ -19,15 +19,15 @@ The main task of this project is to solve a multi-class classification problem i
   * neural network
 * __Graphic Visualisations__:
   * PCA and t-SNE (2D)
-  * box plots for each feature
-  * pairplot of features
+  * box plots 
+  * pairplots
   
 ### Data
 
 The corpus is not publicly available due to copyright, additional information about the play can be found [here](https://www.nickhernbooks.co.uk/class)
 
 
-### Code applied to Class and its translation
+### Full code (Colab Notebooks)
 
 | [English](https://colab.research.google.com/drive/1Gd9Wec9k9CbpPfeQbj7OFNjCxrc48eCQ?usp=sharing) | [Italian](https://colab.research.google.com/drive/1WbrqXStHXht6PF1kvQktL21C-_WaWXZy?usp=sharing) |
 |----|----|
